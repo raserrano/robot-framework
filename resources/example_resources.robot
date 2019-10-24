@@ -2,6 +2,7 @@
 Documentation   Suite description
 Library     SeleniumLibrary
 Library     StringFormat
+Suite Teardown  Close Browser
 
 *** Keywords ***
 navigate to QA playground
@@ -26,17 +27,30 @@ is your hoodie displayed?
 visit shop tab
     Go To   http://34.205.174.166/shop
 
+visit cart page
+    Go To   http://34.205.174.166/cart
+
+verify cart is empty
+    Go To   http://34.205.174.166/cart
+    Wait Until Element Is Visible   ${cart_page.cart_empty}
+    Element Should Be Visible   ${cart_page.cart_empty}
+
+verify cart is not empty
+    Go To   http://34.205.174.166/cart
+    Element Should Not Be Visible   ${cart_page.cart_empty}
+
 select 3 items and add them to the cart
-    Get List Items  ${shop.add_to_cart}
-    Click Link  ${shop.add_to_cart}
+    Click Link  ${shop_page.add_to_cart}
+
+select item to add to cart
+    Click Link  ${shop_page.add_to_cart}
 
 verify the selected items are in the cart
 
 verify that entering coupon displays an error
     [Arguments]  ${coupon}
-    Input Text  ${cart.coupon_field} ${coupon}
-    Click Button    ${cart.coupon_button_submit}
+    Input Text  ${cart_page.coupon_field}   ${coupon}
+    Click Button    ${cart_page.coupon_button_submit}
 
 delete item from cart
-
-verify item was removed from cart
+    Click Element   ${cart_page.remove}

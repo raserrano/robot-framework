@@ -5,9 +5,10 @@ result_page:
   item_result: xpath://h2[text()="{}"]
 
 shop_page:
-  add_to_cart: //a[text()='Add to cart']
+  add_to_cart: class:add_to_cart_button
 
 cart_page:
+  cart_empty: class:cart-empty
   coupon_field: id:coupon_code
   coupon_button_submit: xpath://button[text()='Apply coupon']
   remove: class:remove
