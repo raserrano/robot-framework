@@ -79,3 +79,10 @@ pipenv install
 ### Run
 Use env variables to switch browser
 `APP_URL="http://34.205.174.166/" BROWSER="Chrome"  python example.py`
+
+Using robot framework run
+`robot -d results -i test test_suites`
+
+pipenv install PyYAML
+pipenv install robotframework-pabot
+pipenv install robotframework-stringformat

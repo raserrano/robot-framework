@@ -9,6 +9,11 @@ verify_ssl = true
 robotframework = "*"
 selenium = "*"
 robotframework-seleniumlibrary = "*"
+pyyaml = "*"
+robotframework-pabot = "*"
+robotframework-stringformat = "*"
+flake8 = "*"
+robotframework-lint = "*"
 
 [requires]
 python_version = "3.7"

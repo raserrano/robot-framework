@@ -1,0 +1,13 @@
+home_page:
+  search_field: class:search-field
+
+result_page:
+  item_result: xpath://h2[text()="{}"]
+
+shop_page:
+  add_to_cart: //a[text()='Add to cart']
+
+cart_page:
+  coupon_field: id:coupon_code
+  coupon_button_submit: xpath://button[text()='Apply coupon']
+  remove: class:remove
