@@ -4,7 +4,6 @@ Library  SeleniumLibrary
 Library  StringFormat
 Resource  ../resources/example_resources.robot
 Variables  ../locators/example_locators.yaml
-Suite Teardown  Close Browser
 
 *** Variables ***
 ${COUPON}   Auto2019

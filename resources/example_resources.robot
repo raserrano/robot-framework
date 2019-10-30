@@ -2,10 +2,14 @@
 Documentation   Suite description
 Library     SeleniumLibrary
 Library     StringFormat
-Suite Teardown  Close Browser
 
 *** Keywords ***
 navigate to QA playground
+    ${options}=     Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()   sys, selenium.webdriver
+    Call Method     ${options}  add_argument    --headless
+    Call Method     ${options}  add_argument    --no-sandbox
+    Call Method     ${options}  add_argument    --disable-dev-shm-usage
+    Create WebDriver    Chrome  chrome_options=${options}
     Open Browser    http://34.205.174.166/  Chrome
     Maximize Browser Window
     Set Selenium Speed  0.25

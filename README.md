@@ -58,7 +58,7 @@ pipenv graph
 
 #### Chrome driver installation
 ```bash
-wget https://chromedriver.storage.googleapis.com/77.0.3865.40/chromedriver_linux64.zip
+wget https://chromedriver.storage.googleapis.com/78.0.3904.70/chromedriver_linux64.zip
 unzip chromedriver_linux64.zip
 sudo mkdir -p /opt/chromedriver
 sudo mv chromedriver /opt/chromedriver/
