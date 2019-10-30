@@ -1,0 +1,7 @@
+#!/bin/bash
+wget https://chromedriver.storage.googleapis.com/78.0.3904.70/chromedriver_linux64.zip
+unzip chromedriver_linux64.zip
+mkdir -p /opt/chromedriver
+mv chromedriver /opt/chromedriver/
+cd /usr/local/bin/
+ln -s /opt/chromedriver/chromedriver

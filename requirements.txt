@@ -1,0 +1,14 @@
+entrypoints==0.3
+flake8==3.7.8
+mccabe==0.6.1
+pycodestyle==2.5.0
+pyflakes==2.1.1
+PyYAML==5.1.2
+robotframework==3.1.2
+robotframework-lint==1.0
+robotframework-pabot==0.91
+robotframework-seleniumlibrary==4.1.0
+robotframework-stringformat==0.1.8
+robotremoteserver==1.1
+selenium==3.141.0
+urllib3==1.25.6

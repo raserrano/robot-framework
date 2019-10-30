@@ -1,0 +1,14 @@
+version: '3.3'
+
+services:
+  automation:
+    build:
+      context: .
+      dockerfile: robot.Dockerfile
+    working_dir: /home/automation
+    volumes:
+      - type: bind
+        source: ../
+        target: /home/automation
+    ports:
+      - "1234:1234"
