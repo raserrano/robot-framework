@@ -11,4 +11,4 @@ robotframework-seleniumlibrary==4.1.0
 robotframework-stringformat==0.1.8
 robotremoteserver==1.1
 selenium==3.141.0
-urllib3==1.25.6
+urllib3==1.26.5
